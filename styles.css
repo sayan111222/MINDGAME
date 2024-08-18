@@ -1,0 +1,76 @@
+/* Container styling */
+.container {
+    text-align: center;
+    background-color: #1c1c1c;  /* Dark background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    margin: auto;
+    color: #f8f9fa;  /* Light text color */
+}
+
+/* Game button styling */
+button {
+    background-color: #007bff;  /* Blue accent color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;  /* Darker blue on hover */
+}
+
+/* Input styling */
+input[type="number"] {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    margin-bottom: 10px;
+    background-color: #2b2b2b;  /* Darker input background */
+    color: #f8f9fa;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 20px;
+    padding: 10px 0;
+    background-color: #2b2b2b;  /* Dark footer background */
+    text-align: center;
+    font-size: 14px;
+    width: 300px;  /* Match the width of the container */
+    margin: 20px auto 0 auto;  /* Center align */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: #f8f9fa;  /* Light text color */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer a {
+    color: #ffc107;  /* Yellow accent color for links */
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Question and score text */
+#question, #score {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+#feedback {
+    font-size: 16px;
+    color: #dc3545;  /* Red color for feedback */
+}
