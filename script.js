@@ -72,3 +72,34 @@ startButton.addEventListener('click', () => {
     feedbackElement.textContent = '';
     correctAnswer = generateQuestion();
 });
+
+let timer; // Variable to hold the timer interval
+let timeElapsed = 0; // Time counter starting from 0
+
+// Display the initial time elapsed
+const timerElement = document.getElementById('timer');
+timerElement.textContent = `Time Elapsed: ${timeElapsed}s`;
+
+// Function to start the timer
+function startTimer() {
+    timer = setInterval(() => {
+        timeElapsed++;
+        timerElement.textContent = `Time Elapsed: ${timeElapsed}s`;
+    }, 1000); // Increase time every second
+}
+
+// Function to stop the timer
+function stopTimer() {
+    clearInterval(timer);
+}
+
+// Example: Start the timer when the game starts
+startButton.addEventListener('click', () => {
+    timeElapsed = 0; // Reset the timer to 0 seconds
+    startTimer(); // Start the timer
+});
+
+// Example: Stop the timer when the game ends or at any specific event
+// stopTimer();
+
+
