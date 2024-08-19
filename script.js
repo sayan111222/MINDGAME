@@ -93,11 +93,46 @@ function stopTimer() {
     clearInterval(timer);
 }
 
-// Example: Start the timer when the game starts
+// Function to reset the timer for each question
+function resetTimer() {
+    stopTimer(); // Stop the current timer
+    timeElapsed = 0; // Reset time elapsed to 0
+    timerElement.textContent = `Time Elapsed: ${timeElapsed}s`;
+    startTimer(); // Start the timer again
+}
+
+// Start the timer when the game starts
 startButton.addEventListener('click', () => {
     timeElapsed = 0; // Reset the timer to 0 seconds
     startTimer(); // Start the timer
+    correctAnswer = generateQuestion(); // Generate the first question
 });
+
+// Reset the timer every time a new question is generated
+submitButton.addEventListener('click', () => {
+    const userAnswer = parseFloat(answerInput.value);
+    
+    if (userAnswer === parseFloat(correctAnswer)) {
+        feedbackElement.textContent = 'Correct!';
+        score += 10;
+        scoreElement.textContent = `Score: ${score}`;
+        
+        if (score > highScore) {
+            highScore = score;
+            highscoreElement.textContent = `High Score: ${highScore}`;
+            localStorage.setItem('highScore', highScore);
+        }
+    } else {
+        feedbackElement.textContent = `Wrong! The correct answer was ${correctAnswer}.`;
+    }
+    
+    correctAnswer = generateQuestion(); // Generate the next question
+    resetTimer(); // Reset the timer for the new question
+    answerInput.value = ''; // Clear the input field
+});
+
+
+
 
 // Example: Stop the timer when the game ends or at any specific event
 // stopTimer();
