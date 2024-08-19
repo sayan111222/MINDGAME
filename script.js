@@ -73,6 +73,11 @@ startButton.addEventListener('click', () => {
     correctAnswer = generateQuestion();
 });
 
+
+
+
+
+
 let timer; // Variable to hold the timer interval
 let timeElapsed = 0; // Time counter starting from 0
 
@@ -122,9 +127,7 @@ submitButton.addEventListener('click', () => {
             highscoreElement.textContent = `High Score: ${highScore}`;
             localStorage.setItem('highScore', highScore);
         }
-    } else {
-        feedbackElement.textContent = `Wrong! The correct answer was ${correctAnswer}.`;
-    }
+    } 
     
     correctAnswer = generateQuestion(); // Generate the next question
     resetTimer(); // Reset the timer for the new question
