@@ -74,3 +74,11 @@ footer a:hover {
     font-size: 16px;
     color: #dc3545;  /* Red color for feedback */
 }
+
+
+#timer {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #ffc107;  /* Yellow color for the timer */
+}
+
